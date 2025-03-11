@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f5f5f5" rx="5" ry="5"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">DMux8Way Implementation</text>
+  
+  <!-- First level DMux -->
+  <rect x="150" y="150" width="70" height="50" rx="5" ry="5" fill="#ffe6e6" stroke="black" stroke-width="2"/>
+  <text x="185" y="180" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">DMux</text>
+  
+  <!-- Second level DMux gates -->
+  <rect x="260" y="100" width="70" height="50" rx="5" ry="5" fill="#ffe6e6" stroke="black" stroke-width="2"/>
+  <text x="295" y="130" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">DMux</text>
+  
+  <rect x="260" y="200" width="70" height="50" rx="5" ry="5" fill="#ffe6e6" stroke="black" stroke-width="2"/>
+  <text x="295" y="230" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">DMux</text>
+  
+  <!-- Third level DMux gates -->
+  <rect x="370" y="70" width="70" height="50" rx="5" ry="5" fill="#ffe6e6" stroke="black" stroke-width="2"/>
+  <text x="405" y="100" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">DMux</text>
+  
+  <rect x="370" y="130" width="70" height="50" rx="5" ry="5" fill="#ffe6e6" stroke="black" stroke-width="2"/>
+  <text x="405" y="160" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">DMux</text>
+  
+  <rect x="370" y="190" width="70" height="50" rx="5" ry="5" fill="#ffe6e6" stroke="black" stroke-width="2"/>
+  <text x="405" y="220" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">DMux</text>
+  
+  <rect x="370" y="250" width="70" height="50" rx="5" ry="5" fill="#ffe6e6" stroke="black" stroke-width="2"/>
+  <text x="405" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">DMux</text>
+  
+  <!-- Input wire -->
+  <line x1="100" y1="175" x2="150" y2="175" stroke="black" stroke-width="2"/>
+  <text x="125" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">in</text>
+  
+  <!-- Selector wires -->
+  <text x="110" y="210" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">sel[2]</text>
+  <line x1="130" y1="210" x2="150" y2="190" stroke="black" stroke-width="1"/>
+  
+  <text x="230" y="90" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">sel[1]</text>
+  <line x1="230" y1="100" x2="260" y2="120" stroke="black" stroke-width="1"/>
+  
+  <text x="230" y="240" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">sel[1]</text>
+  <line x1="230" y1="230" x2="260" y2="220" stroke="black" stroke-width="1"/>
+  
+  <text x="340" y="60" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">sel[0]</text>
+  <line x1="340" y1="70" x2="370" y2="85" stroke="black" stroke-width="1"/>
+  
+  <text x="340" y="120" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">sel[0]</text>
+  <line x1="340" y1="130" x2="370" y2="145" stroke="black" stroke-width="1"/>
+  
+  <text x="340" y="180" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">sel[0]</text>
+  <line x1="340" y1="190" x2="370" y2="205" stroke="black" stroke-width="1"/>
+  
+  <text x="340" y="240" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">sel[0]</text>
+  <line x1="340" y1="250" x2="370" y2="265" stroke="black" stroke-width="1"/>
+  
+  <!-- Connecting wires -->
+  <line x1="220" y1="160" x2="240" y2="160" stroke="black" stroke-width="2"/>
+  <line x1="240" y1="160" x2="240" y2="125" stroke="black" stroke-width="2"/>
+  <line x1="240" y1="125" x2="260" y2="125" stroke="black" stroke-width="2"/>
+  <text x="230" y="145" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">w1</text>
+  
+  <line x1="220" y1="190" x2="240" y2="190" stroke="black" stroke-width="2"/>
+  <line x1="240" y1="190" x2="240" y2="225" stroke="black" stroke-width="2"/>
+  <line x1="240" y1="225" x2="260" y2="225" stroke="black" stroke-width="2"/>
+  <text x="230" y="205" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">w2</text>
+  
+  <line x1="330" y1="110" x2="350" y2="110" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="110" x2="350" y2="95" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="95" x2="370" y2="95" stroke="black" stroke-width="2"/>
+  <text x="340" y="105" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">x1</text>
+  
+  <line x1="330" y1="130" x2="350" y2="130" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="130" x2="350" y2="155" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="155" x2="370" y2="155" stroke="black" stroke-width="2"/>
+  <text x="340" y="145" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">x2</text>
+  
+  <line x1="330" y1="210" x2="350" y2="210" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="210" x2="350" y2="215" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="215" x2="370" y2="215" stroke="black" stroke-width="2"/>
+  <text x="340" y="205" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">x3</text>
+  
+  <line x1="330" y1="230" x2="350" y2="230" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="230" x2="350" y2="275" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="275" x2="370" y2="275" stroke="black" stroke-width="2"/>
+  <text x="340" y="245" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">x4</text>
+  
+  <!-- Output wires and labels -->
+  <line x1="440" y1="80" x2="500" y2="80" stroke="black" stroke-width="2"/>
+  <text x="480" y="75" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">a</text>
+  
+  <line x1="440" y1="110" x2="500" y2="110" stroke="black" stroke-width="2"/>
+  <text x="480" y="105" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">b</text>
+  
+  <line x1="440" y1="140" x2="500" y2="140" stroke="black" stroke-width="2"/>
+  <text x="480" y="135" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">c</text>
+  
+  <line x1="440" y1="170" x2="500" y2="170" stroke="black" stroke-width="2"/>
+  <text x="480" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">d</text>
+  
+  <line x1="440" y1="200" x2="500" y2="200" stroke="black" stroke-width="2"/>
+  <text x="480" y="195" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">e</text>
+  
+  <line x1="440" y1="230" x2="500" y2="230" stroke="black" stroke-width="2"/>
+  <text x="480" y="225" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">f</text>
+  
+  <line x1="440" y1="260" x2="500" y2="260" stroke="black" stroke-width="2"/>
+  <text x="480" y="255" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">g</text>
+  
+  <line x1="440" y1="290" x2="500" y2="290" stroke="black" stroke-width="2"/>
+  <text x="480" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">h</text>
+  
+  <!-- Selector logic explanation -->
+  <text x="300" y="340" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">DMux8Way routes the input to one of 8 outputs based on sel[2:0]</text>
+  <text x="300" y="355" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Example: If sel=000, then a=in (all others 0). If sel=111, then h=in (all others 0).</text>
+  <text x="300" y="370" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Implementation: First split by sel[2], then by sel[1], then by sel[0]</text>
+</svg>

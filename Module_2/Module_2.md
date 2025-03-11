@@ -50,6 +50,25 @@ To derive a Boolean expression from a truth table:
 3. Combine these expressions with OR operations
 4. Simplify the resulting expression using Boolean algebra
 
+### Example
+| X   | Y   | Z   | f   |
+| --- | --- | --- | --- |
+| 0   | 0   | 0   | 1   |
+| 0   | 0   | 1   | 0   |
+| 0   | 1   | 0   | 1   |
+| 0   | 1   | 1   | 0   |
+| 1   | 0   | 0   | 1   |
+| 1   | 0   | 1   | 0   |
+| 1   | 1   | 0   | 0   |
+| 1   | 1   | 1   | 0   |
+- Look at the result of f with the result of 1, find the expression of them.
+	- Not(x) AND Not(y) AND Not(z) --> First 1's expression
+	- Not(x) AND y AND Not(z)
+	- x AND Not(y) AND Not(z)
+- Combine them...
+	- (Not(x) AND Not(y) AND Not(z)) OR (Not(x) AND y AND Not(z)) OR (x AND Not(y) AND Not(z))
+    - ![Module_2](./Assets/Module_2.png)
+
 ## Logic Gates
 
 ### Elementary Gates
@@ -64,6 +83,12 @@ Gates built from combinations of elementary gates:
 - Demultiplexers (DMUX)
 - Adders
 - And more complex circuits
+
+### Circuit Implementation
+- AND / OR Circuit
+- ![Module_3_2](./Assets/Module_3_2.png)
+- AND (3-Inputs)
+- ![Module_3_3](./Assets/Module_3_3.png)
 
 ## Hardware Description Language
 
@@ -98,6 +123,8 @@ Multi-bit buses can be accessed in various ways:
 ## Basic Gates Implementation
 
 ### NOT Gate
+![NOT](./Assets/not-gate.svg)
+
 ```
 CHIP Not {
     IN in;
@@ -116,6 +143,8 @@ CHIP Not {
 **Implementation Hint:** When you input the same value X into both inputs of a NAND gate, it outputs NOT(X). This is because NAND(X,X) = NOT(X AND X) = NOT(X).
 
 ### AND Gate
+![AND](./Assets/and-gate.svg)
+
 ```
 CHIP And {
     IN a, b;
@@ -137,6 +166,8 @@ CHIP And {
 **Implementation Hint:** NAND gate is AND but with the opposite output, so you can reverse engineer it by applying the NOT Gate to get AND gate outputs.
 
 ### OR Gate
+![OR](./Assets/or-gate.svg)
+
 ```
 CHIP Or {
     IN a, b;
@@ -159,6 +190,8 @@ CHIP Or {
 **Implementation Hint:** Look at De Morgan's Law identities and connect NOT(X OR Y) to making OR Gate, which equals NAND(NOT(X), NOT(Y)).
 
 ### XOR Gate
+![XOR](./Assets/xor-gate.svg)
+
 ```
 CHIP Xor {
     IN a, b;
@@ -186,6 +219,10 @@ CHIP Xor {
 
 ### Multiplexer (MUX)
 Selects between two inputs based on a selection bit.
+
+![MUX_Diagram](./Assets/4-35.png)
+
+![MUX](./Assets/mux-gate.svg)
 
 ```
 CHIP Mux {
@@ -217,6 +254,11 @@ Boolean Equation: (NOT(sel) AND a) OR (sel AND b)
 
 ### Demultiplexer (DMUX)
 Routes an input to one of two outputs based on a selection bit.
+
+![DMux_Diagram](./Assets/n9upM.png)
+
+![DMux](./Assets/dmux-gate.svg)
+
 
 ```
 CHIP DMux {
@@ -319,6 +361,9 @@ CHIP And16 {
 ### Multi-Way Multiplexers and Demultiplexers
 
 #### 4-Way 16-bit Multiplexer
+
+![MUX4Way16](./Assets/mux4way16-gate.svg)
+
 ```
 CHIP Mux4Way16 {
     IN a[16], b[16], c[16], d[16], sel[2];
@@ -340,6 +385,9 @@ CHIP Mux4Way16 {
 **Implementation Hint:** Can be implemented with just multiple Mux16 gates. First, use sel[0] to choose between a/b and between c/d, then use sel[1] to choose between those two results. This creates a tree-like structure that efficiently implements the 4-way selection.
 
 #### 8-Way 16-bit Multiplexer
+
+![Mux8Way16](./Assets/mux8way16-gate.svg)
+
 ```
 CHIP Mux8Way16 {
     IN a[16], b[16], c[16], d[16],
@@ -371,6 +419,9 @@ CHIP Mux8Way16 {
 **Implementation Hint:** Similar to Mux4Way16 circuit, don't overthink it. Everything is built to follow a pattern. Use sel[0] to select between pairs, then sel[1] to select between pairs of pairs, and finally sel[2] to select the final output. To verify your approach, trace the path with sel = "000" - it should lead to output 'a'.
 
 #### 4-Way Demultiplexer
+
+![DMux4Way](./Assets/dmux4way-gate.svg)
+
 ```
 CHIP DMux4Way {
     IN in, sel[2];
@@ -392,6 +443,9 @@ CHIP DMux4Way {
 **Implementation Hint:** Think of it like decoding a signal. We would use a DMux to decode a signal that went through a Mux. It's essentially a Mux4Way but in the opposite direction. First split the input based on sel[1], then further split each result based on sel[0].
 
 #### 8-Way Demultiplexer
+
+![DMux8Way](./Assets/dmux8way-gate.svg)
+
 ```
 CHIP DMux8Way {
     IN in, sel[3];
@@ -424,6 +478,8 @@ CHIP DMux8Way {
 
 ### Or8Way
 A gate that outputs 1 if at least one of its 8 inputs is 1, otherwise outputs 0.
+
+![Or8Way](./Assets/or8way-gate.svg)
 
 ```
 CHIP Or8Way {

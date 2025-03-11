@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <!-- Background -->
+  <rect width="400" height="200" fill="#f5f5f5" rx="5" ry="5"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">AND Gate Implementation</text>
+  
+  <!-- NAND Gate -->
+  <path d="M110,100 L110,70 L180,70 A20,30 0 0 1 180,130 L110,130 Z" stroke="black" fill="#e6f7ff" stroke-width="2"/>
+  <circle cx="195" cy="100" r="15" stroke="black" fill="white" stroke-width="2"/>
+  <text x="145" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">NAND</text>
+  
+  <!-- NOT Gate (inverter) -->
+  <path d="M250,100 L250,80 L280,100 L250,120 Z" stroke="black" fill="#ffe6e6" stroke-width="2"/>
+  <circle cx="290" cy="100" r="10" stroke="black" fill="white" stroke-width="2"/>
+  <text x="265" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">NOT</text>
+  
+  <!-- Input wires -->
+  <line x1="50" y1="80" x2="110" y2="80" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="120" x2="110" y2="120" stroke="black" stroke-width="2"/>
+  
+  <!-- Connecting wire -->
+  <line x1="210" y1="100" x2="250" y2="100" stroke="black" stroke-width="2"/>
+  
+  <!-- Output wire -->
+  <line x1="300" y1="100" x2="350" y2="100" stroke="black" stroke-width="2"/>
+  
+  <!-- Input and Output Labels -->
+  <text x="70" y="76" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">a</text>
+  <text x="70" y="116" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">b</text>
+  <text x="340" y="96" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">out</text>
+  <text x="230" y="96" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">w1</text>
+  
+  <!-- Boolean equation -->
+  <text x="200" y="160" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">AND(a,b) = NOT(NAND(a,b))</text>
+</svg>

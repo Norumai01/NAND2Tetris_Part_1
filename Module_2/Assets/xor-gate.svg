@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280">
+  <!-- Background -->
+  <rect width="500" height="280" fill="#f5f5f5" rx="5" ry="5"/>
+  
+  <!-- Title -->
+  <text x="250" y="30" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">XOR Gate Implementation</text>
+  
+  <!-- NOT Gates -->
+  <path d="M130,80 L130,60 L160,80 L130,100 Z" stroke="black" fill="#ffe6e6" stroke-width="2"/>
+  <circle cx="170" cy="80" r="10" stroke="black" fill="white" stroke-width="2"/>
+  <text x="145" y="85" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">NOT</text>
+  
+  <path d="M130,200 L130,180 L160,200 L130,220 Z" stroke="black" fill="#ffe6e6" stroke-width="2"/>
+  <circle cx="170" cy="200" r="10" stroke="black" fill="white" stroke-width="2"/>
+  <text x="145" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">NOT</text>
+  
+  <!-- AND Gates -->
+  <path d="M250,120 L250,90 L290,90 A30,30 0 0 1 290,150 L250,150 Z" stroke="black" fill="#e6fffa" stroke-width="2"/>
+  <text x="270" y="125" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">AND</text>
+  
+  <path d="M250,210 L250,180 L290,180 A30,30 0 0 1 290,240 L250,240 Z" stroke="black" fill="#e6fffa" stroke-width="2"/>
+  <text x="270" y="215" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">AND</text>
+  
+  <!-- OR Gate -->
+  <path d="M390,160 Q390,130 410,130 L440,130 Q460,130 460,160 Q460,190 440,190 L410,190 Q390,190 390,160 Z" stroke="black" fill="#fff2e6" stroke-width="2"/>
+  <text x="425" y="165" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">OR</text>
+  
+  <!-- Input wires -->
+  <line x1="50" y1="80" x2="130" y2="80" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="200" x2="130" y2="200" stroke="black" stroke-width="2"/>
+  
+  <!-- Wire from a to first AND gate -->
+  <line x1="90" y1="80" x2="90" y2="120" stroke="black" stroke-width="2"/>
+  <line x1="90" y1="120" x2="250" y2="120" stroke="black" stroke-width="2"/>
+  
+  <!-- Wire from b to second AND gate -->
+  <line x1="90" y1="200" x2="90" y2="210" stroke="black" stroke-width="2"/>
+  <line x1="90" y1="210" x2="250" y2="210" stroke="black" stroke-width="2"/>
+  
+  <!-- Wires from NOT gates -->
+  <line x1="180" y1="80" x2="200" y2="80" stroke="black" stroke-width="2"/>
+  <line x1="200" y1="80" x2="200" y2="210" stroke="black" stroke-width="2"/>
+  <line x1="200" y1="210" x2="250" y2="210" stroke="black" stroke-width="2"/>
+  
+  <line x1="180" y1="200" x2="200" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="200" y1="200" x2="200" y2="120" stroke="black" stroke-width="2"/>
+  <line x1="200" y1="120" x2="250" y2="120" stroke="black" stroke-width="2"/>
+  
+  <!-- Output wires from AND gates -->
+  <line x1="290" y1="120" x2="350" y2="120" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="120" x2="350" y2="145" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="145" x2="390" y2="145" stroke="black" stroke-width="2"/>
+  
+  <line x1="290" y1="210" x2="350" y2="210" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="210" x2="350" y2="175" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="175" x2="390" y2="175" stroke="black" stroke-width="2"/>
+  
+  <!-- Final output wire -->
+  <line x1="460" y1="160" x2="480" y2="160" stroke="black" stroke-width="2"/>
+  
+  <!-- Input and Output Labels -->
+  <text x="70" y="76" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">a</text>
+  <text x="70" y="196" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">b</text>
+  <text x="470" y="156" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">out</text>
+  <text x="190" y="76" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">nota</text>
+  <text x="190" y="196" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">notb</text>
+  <text x="320" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">w1</text>
+  <text x="320" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">w2</text>
+  
+  <!-- Boolean equation -->
+  <text x="250" y="250" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">XOR(a,b) = (a AND NOT(b)) OR (NOT(a) AND b)</text>
+</svg>

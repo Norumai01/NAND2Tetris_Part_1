@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280">
+  <!-- Background -->
+  <rect width="500" height="280" fill="#f5f5f5" rx="5" ry="5"/>
+  
+  <!-- Title -->
+  <text x="250" y="30" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">MUX (Multiplexer) Implementation</text>
+  
+  <!-- NOT Gate for sel -->
+  <path d="M130,140 L130,120 L160,140 L130,160 Z" stroke="black" fill="#ffe6e6" stroke-width="2"/>
+  <circle cx="170" cy="140" r="10" stroke="black" fill="white" stroke-width="2"/>
+  <text x="145" y="145" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">NOT</text>
+  
+  <!-- AND Gates -->
+  <path d="M250,90 L250,60 L290,60 A30,30 0 0 1 290,120 L250,120 Z" stroke="black" fill="#e6fffa" stroke-width="2"/>
+  <text x="270" y="95" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">AND</text>
+  
+  <path d="M250,200 L250,170 L290,170 A30,30 0 0 1 290,230 L250,230 Z" stroke="black" fill="#e6fffa" stroke-width="2"/>
+  <text x="270" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">AND</text>
+  
+  <!-- OR Gate -->
+  <path d="M390,140 Q390,110 410,110 L440,110 Q460,110 460,140 Q460,170 440,170 L410,170 Q390,170 390,140 Z" stroke="black" fill="#fff2e6" stroke-width="2"/>
+  <text x="425" y="145" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">OR</text>
+  
+  <!-- Input wires -->
+  <line x1="50" y1="80" x2="210" y2="80" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="190" x2="210" y2="190" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="140" x2="130" y2="140" stroke="black" stroke-width="2"/>
+  
+  <!-- Connecting wires to first AND gate -->
+  <line x1="210" y1="80" x2="250" y2="80" stroke="black" stroke-width="2"/>
+  <line x1="180" y1="140" x2="200" y2="140" stroke="black" stroke-width="2"/>
+  <line x1="200" y1="140" x2="200" y2="100" stroke="black" stroke-width="2"/>
+  <line x1="200" y1="100" x2="250" y2="100" stroke="black" stroke-width="2"/>
+  
+  <!-- Connecting wires to second AND gate -->
+  <line x1="210" y1="190" x2="250" y2="190" stroke="black" stroke-width="2"/>
+  <line x1="90" y1="140" x2="90" y2="210" stroke="black" stroke-width="2"/>
+  <line x1="90" y1="210" x2="250" y2="210" stroke="black" stroke-width="2"/>
+  
+  <!-- Output wires from AND gates to OR gate -->
+  <line x1="290" y1="90" x2="350" y2="90" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="90" x2="350" y2="125" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="125" x2="390" y2="125" stroke="black" stroke-width="2"/>
+  
+  <line x1="290" y1="200" x2="350" y2="200" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="200" x2="350" y2="155" stroke="black" stroke-width="2"/>
+  <line x1="350" y1="155" x2="390" y2="155" stroke="black" stroke-width="2"/>
+  
+  <!-- Final output wire -->
+  <line x1="460" y1="140" x2="480" y2="140" stroke="black" stroke-width="2"/>
+  
+  <!-- Input and Output Labels -->
+  <text x="70" y="76" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">a</text>
+  <text x="70" y="186" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">b</text>
+  <text x="70" y="136" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">sel</text>
+  <text x="470" y="136" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">out</text>
+  <text x="190" y="136" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">notSel</text>
+  <text x="320" y="90" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">w1</text>
+  <text x="320" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">w2</text>
+  
+  <!-- Boolean equation -->
+  <text x="250" y="250" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">MUX(a,b,sel) = (NOT(sel) AND a) OR (sel AND b)</text>
+</svg>
